@@ -25,7 +25,7 @@ if(Recipes.find().count() === 0){
 mealList.forEach(function(recipe){
   recipe.ingredients.forEach(function(ingredient){
     if(Ingredients.find({name: ingredient.name}).count() === 0)
-    Ingredients.insert({name: ingredient.name, userId: jmarks._id})
+    Ingredients.insert({name: ingredient.name, userId: jmarks._id, include:true})
   })
 })
 

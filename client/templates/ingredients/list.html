@@ -1,6 +1,6 @@
 <template name="ingredientList">
   <div class="ui main text container">
-    <div class="ui stackable five column grid">
+    <div class="ui stackable three column grid">
         {{#each ingredients}}
           {{> ingredientListItem}}
         {{/each}}
@@ -14,11 +14,17 @@
     <div class="ui raised segment">
       <div class="middle aligned content">
         <div class="header">
-          {{name}}
-        </div>
-        <div class="extra">
-          <div class="ui middle floated button">
-            Edit
+          <div class="ui grid">
+            <span>
+              {{> editableText collection="ingredients" field="name"}}
+              <i class="trash icon right floated" id="delete"></i>
+              <div class="actions">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example" checked={{include}}>
+                  <label>Include In Shopping List</label>
+                </div>
+              </div>
+            </span>
           </div>
         </div>
       </div>

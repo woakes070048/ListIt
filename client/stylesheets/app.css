@@ -1,8 +1,24 @@
-#maincontent{
+#mainContent{
   background-color: #fafafa;
   background-size: cover;
   padding-top: 50px !important;
   padding-bottom: 50px !important;
+  height:100%
+}
+#mainRow{
+  height:100%
+}
+
+#mainColumn{
+  height:100%
+}
+
+#mainGrid{
+  height:100%
+}
+
+.trash.icon{
+  float: right;
 }
 
 #logginBtn{

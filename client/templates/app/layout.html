@@ -2,12 +2,16 @@
   {{#if currentUser}}
     {{> header}}
   {{/if}}
-  <div class="ui grid">
-    <div class="row">
-      <div class="column">
-        <div class="ui bottom attached segment pushable">
-          {{#if currentUser}}<div id="sidebar">{{> sideMenu}}</div>{{/if}}
-          <div id="maincontent">{{> yield}}</div>
+  <div id="pushable" class="ui bottom attached pushable">
+    {{#if currentUser}}
+      {{> sideMenu}}
+    {{/if}}
+    <div class="pusher">
+      <div class="ui grid" id="mainGrid">
+        <div class="row" id="mainRow">
+          <div class="column" id="mainColumn">
+            <div id="mainContent">{{> yield}}</div>
+          </div>
         </div>
       </div>
     </div>

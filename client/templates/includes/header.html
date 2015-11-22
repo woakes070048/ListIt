@@ -1,5 +1,9 @@
 <template name="header">
-  <div class="ui fixed inverted yellow main menu">
+  <div class="ui top attached inverted yellow menu">
+    <a id="sidebar-toggle" class="item">
+      <i class="sidebar icon"></i>
+      Menu
+    </a>
     <div class="ui container">
       <div class="{{isActiveRoute regex='home'}} header item"><a href="{{pathFor 'home'}}">Home</a></div>
         <a class="{{isActiveRoute regex='shoppingList'}} item" href="{{pathFor 'shoppingList'}}">Create List</a>
